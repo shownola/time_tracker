@@ -16,8 +16,9 @@
       <%= yield %>
 		</div>
 	</div>
+</div>
 	
-	<%= js add_gritter(flash[:notice], title: "Time_Tracker App Notification", sticky: false, image: :notice) %>
+	<%= render 'shared/alerts' %>
 
 </body>
 </html>
