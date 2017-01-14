@@ -22,7 +22,7 @@
 - x Update the styles for forms
 - 
 ## TODOS:
-- Integrate validation for phone attr in User:
-- No spaces or dashes
-- exactly 10 characters 
-- all character have to be a number
+-x Integrate validation for phone attr in User:
+-x No spaces or dashes
+-x exactly 10 characters 
+-x all character have to be a number
