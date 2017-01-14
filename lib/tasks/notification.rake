@@ -12,9 +12,7 @@ namespace :notification do
     
     #number: "555-555-3323"
     #number: "5555553323"
-    # No spaces or dashes
-    # exactly 10 characters 
-    # all character have to be a number
+   
   end
 
 end
