@@ -10,7 +10,7 @@
 - 
 ##Features:
 - Approval Workflow
-- SMS Sending -> link to approval or overtime input
+- SMS Sending -> link to approval or overtime input -> Integrate with Heroku scheduler
 - x Administrative admin dashboard
 - x Block non admin and guest users 
 - Email summary to managers for approval
@@ -22,7 +22,15 @@
 - x Update the styles for forms
 - 
 ## TODOS:
--x Integrate validation for phone attr in User:
--x No spaces or dashes
--x exactly 10 characters 
--x all character have to be a number
+
+## NOTES:
+- Goal of audit log
+- keep track of whether or not an employee had overtime
+- Dependencies:
+- User
+- Atributes: 
+- Status:integer - (enum) pending, complete
+- Start_Date:date -> default previous Monday
+- Date_verified
+ 
+
