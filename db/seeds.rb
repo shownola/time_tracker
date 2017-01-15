@@ -17,7 +17,11 @@ AdminUser.create(email: "admin@test.com",
 puts "1 AdminUser created"
 
 50.times do |post|
-  Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user.id,
+  Post.create!(date: Date.today, rationale: "#{post} Flank meatloaf shank cow kevin.
+    Andouille ball tip spare ribs turducken tongue picanha frankfurter rump. Turkey 
+    andouille ground round pork shank corned beef beef, strip steak pork loin pork 
+    chop bresaola tail jerky sausage. Shankle picanha fatback ball tip pork loin tri-tip
+    salami pancetta.", user_id: @user.id,
       overtime_request: 2.5)
 end
 puts "50 Posts have been created"
