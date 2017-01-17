@@ -1,11 +1,11 @@
-@user = User.create(email: "test@test.com",
+@employee = Employee.create(email: "test@test.com",
                     password: "asdfasdf", 
                     password_confirmation: "asdfasdf",
                     first_name: "John",
                     last_name: "Snow",
                     phone: 4807393261)
               
-puts "1 User created"
+puts "1 employee created"
 
 AdminUser.create(email: "admin@test.com",
                  password: "asdfasdf", 
@@ -17,9 +17,9 @@ AdminUser.create(email: "admin@test.com",
 puts "1 AdminUser created"
 
 
- AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 6.days))
- AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 13.days))
- AuditLog.create!(user_id: @user.id, status: 0, start_date: (Date.today - 20.days))
+ AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 6.days))
+ AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 13.days))
+ AuditLog.create!(user_id: @employee.id, status: 0, start_date: (Date.today - 20.days))
       
  
  puts "03 audit logs have been created"
@@ -29,7 +29,7 @@ puts "1 AdminUser created"
     Andouille ball tip spare ribs turducken tongue picanha frankfurter rump. Turkey 
     andouille ground round pork shank corned beef beef, strip steak pork loin pork 
     chop bresaola tail jerky sausage. Shankle picanha fatback ball tip pork loin tri-tip
-    salami pancetta.", user_id: @user.id,
+    salami pancetta.", user_id: @employee.id,
       overtime_request: 2.5)
 end
 puts "50 Posts have been created"
