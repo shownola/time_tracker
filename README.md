@@ -16,11 +16,11 @@
 - x Email summary to managers for approval
 - x Needs to be documented if employee did not log overtime
 - Create audit log for each text message
-- Update end_date when confirmed
-- Update audit log status when an overtime rejected
+- x Update end_date when confirmed
+- x Update audit log status when an overtime rejected
 - x Home icon
-- Update button on employee homepage for mobile responsive
-- Update button to include time span
+- x Update button on employee homepage for mobile responsive
+- x Update button to include time span
 - Update button sort order on employee homepage
 - Update Admin page to remove unnecessary navbar buttons 
 - Implement Honeybadger error reporting
