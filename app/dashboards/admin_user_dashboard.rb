@@ -8,7 +8,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    posts: Field::HasMany.with_options(searchable: false),
+    posts: Field::HasMany.with_options(searchable: true),
     id: Field::Number.with_options(searchable: false),
     email: Field::String.with_options(searchable: true),
     password: Field::String.with_options(searchable: false),
@@ -23,6 +23,8 @@ class AdminUserDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::String.with_options(searchable: false),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -32,17 +34,20 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :posts,
-    :id,
+    :ssn,
     :email,
+    :company
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
+    :ssn,
     :posts,
     :id,
     :email,
     :phone,
+    :company,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -59,7 +64,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-   
+    :ssn,
     :email,
     :sign_in_count,
     :password,
@@ -67,6 +72,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :last_name,
     :type,
     :phone,
+    :company,
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed

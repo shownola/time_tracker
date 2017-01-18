@@ -23,6 +23,8 @@ class EmployeeDashboard < Administrate::BaseDashboard
     updated_at: Field::DateTime.with_options(searchable: false),
     type: Field::String.with_options(searchable: false),
     phone: Field::String.with_options(searchable: false),
+    ssn: Field::Number.with_options(searchable: true),
+    company: Field::String.with_options(searchable: false),
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -34,15 +36,17 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
+    :ssn
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :posts,
-    :id,
+    :ssn,
     :email,
     :phone,
+    :company,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -59,7 +63,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-   
+    :ssn,
     :email,
     :sign_in_count,
     :password,
@@ -67,6 +71,7 @@ class EmployeeDashboard < Administrate::BaseDashboard
     :last_name,
     :type,
     :phone,
+    :company,
   ].freeze
 
   # Overwrite this method to customize how admin users are displayed
