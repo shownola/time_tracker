@@ -34,7 +34,7 @@ puts "1 AdminUser created"
     andouille ground round pork shank corned beef beef, strip steak pork loin pork 
     chop bresaola tail jerky sausage. Shankle picanha fatback ball tip pork loin tri-tip
     salami pancetta.", user_id: @employee.id,
-      overtime_request: 2.5)
+      daily_hours: 12.5)
 end
 puts "50 Posts have been created"
 
